@@ -7,5 +7,4 @@ export interface ProductoInterface {
   precio: number;
   stock: number;
   paisOrigen: any;
-  // comestible: boolean;
 }

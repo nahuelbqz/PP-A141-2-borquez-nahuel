@@ -14,7 +14,7 @@ export class NavbarComponent {
   router = inject(Router);
   rolUsuario = '';
   isLogged = false;
-  currentUser: any = null; // Variable para almacenar el usuario actual
+  currentUser: any = null;
 
   ngOnInit(): void {
     this.authService.user$.subscribe((user) => {
@@ -30,7 +30,6 @@ export class NavbarComponent {
           username: user.displayName!,
           rol: this.rolUsuario,
         });
-
       } else {
         this.authService.currentUserSig.set(null);
         this.isLogged = false;

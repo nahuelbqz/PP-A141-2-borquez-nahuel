@@ -9,7 +9,6 @@ import {
   updateDoc,
 } from '@angular/fire/firestore';
 import { ProductoInterface, ProductoInterfaceId } from '../interfaces/producto';
-import { from, map, Observable } from 'rxjs';
 import {
   ContainerInterface,
   ContainerInterfaceId,
@@ -26,7 +25,7 @@ export class EntidadesService {
     const productosCol = collection(this.firestore, 'productos');
     const productosSnapshot = await getDocs(productosCol);
     const productosList = productosSnapshot.docs.map((doc) => {
-      return doc.data() as ProductoInterface; //...doc.data() } as Producto;
+      return doc.data() as ProductoInterface;
     });
 
     return productosList;
@@ -44,7 +43,6 @@ export class EntidadesService {
         precio: producto.precio,
         stock: producto.stock,
         paisOrigen: producto.paisOrigen,
-        // comestible: producto.comestible,
       };
 
       await addDoc(productoCol, prod);
@@ -62,7 +60,6 @@ export class EntidadesService {
 
       const cont = {
         codigo: container.codigo,
-        color: container.color,
         empresa: container.empresa,
         capacidad: container.capacidad,
       };
@@ -81,7 +78,6 @@ export class EntidadesService {
 
       const updatedCont = {
         codigo: updatedContainer.codigo,
-        color: updatedContainer.color,
         empresa: updatedContainer.empresa,
         capacidad: updatedContainer.capacidad,
       };

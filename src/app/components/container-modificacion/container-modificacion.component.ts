@@ -1,6 +1,7 @@
 import { Component, inject, Input } from '@angular/core';
 import {
   FormBuilder,
+  FormGroup,
   FormsModule,
   ReactiveFormsModule,
   Validators,
@@ -25,30 +26,28 @@ export class ContainerModificacionComponent {
   containerModif: ContainerInterfaceId = {
     id: '',
     codigo: 0,
-    color: '',
+    // color: '',
     empresa: '',
     capacidad: 0,
   };
   entidadesService: EntidadesService = inject(EntidadesService);
-
-  //@ts-ignore
-  forma: FormGroup;
+  forma!: FormGroup;
 
   constructor(private formBuilder: FormBuilder) {}
 
   ngOnInit(): void {
     this.forma = this.formBuilder.group({
-      codigo: ['', Validators.required],
-      color: ['', Validators.required],
+      codigo: ['', [Validators.required, Validators.min(100)]],
+      // color: ['', Validators.required],
       empresa: ['', Validators.required],
-      capacidad: ['', Validators.required],
+      capacidad: ['', [Validators.required, Validators.min(1)]],
     });
   }
 
   modificarContainer(containerId?: string) {
     if (!this.forma.invalid) {
       this.containerModif.codigo = this.forma.getRawValue().codigo;
-      this.containerModif.color = this.forma.getRawValue().color;
+      // this.containerModif.color = this.forma.getRawValue().color;
       this.containerModif.empresa = this.forma.getRawValue().empresa;
       this.containerModif.capacidad = this.forma.getRawValue().capacidad;
 
@@ -66,7 +65,7 @@ export class ContainerModificacionComponent {
       this.containerModif = {
         id: '',
         codigo: 0,
-        color: '',
+        // color: '',
         empresa: '',
         capacidad: 0,
       };

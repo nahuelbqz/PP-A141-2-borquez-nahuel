@@ -13,7 +13,6 @@
           <a class="nav-link" routerLink="/bienvenida">BIENVENIDA</a>
         </li>
 
-
         @if(authService.currentUserSig() != null || authService.currentUserSig() != undefined){
         <li class="nav-item">
           <a class="nav-link" routerLink="/producto-alta">PRODUCTO ALTA</a>
@@ -22,11 +21,6 @@
           <a class="nav-link" routerLink="/producto-detalle">PRODUCTO DETALLE</a>
         </li>
         }
-
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/lista-prod-publica">PROD LISTA PUBLICA</a>
-        </li>
-
 
         @if(authService.currentUserSig() != null || authService.currentUserSig() != undefined){
         <li class="nav-item">

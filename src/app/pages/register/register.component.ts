@@ -34,7 +34,7 @@ export class RegisterComponent {
       .register(value.email, value.username, value.password)
       .subscribe({
         next: () => {
-          this.router.navigateByUrl('/');
+          this.router.navigateByUrl('/bienvenida');
         },
         error: () => {
           this.toastAlert.error(

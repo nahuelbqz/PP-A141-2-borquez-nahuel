@@ -9,15 +9,6 @@
         El Código es requerido
       </small>
     </div>
-    <!-- CONTROL COLOR -->
-    <div>
-      <label for="color" class="form-label">Color</label>
-      <input type="text" class="form-control" formControlName="color" required />
-      <small style="color: red;"
-        *ngIf="forma.controls['color'].errors?.['required'] && forma.controls['color'].touched">
-        El color es requerido
-      </small>
-    </div>
     <!-- CONTROL EMPRESA -->
     <div>
       <label for="empresa" class="form-label">Empresa</label>

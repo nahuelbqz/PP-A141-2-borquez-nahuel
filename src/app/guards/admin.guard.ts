@@ -10,10 +10,10 @@ export const adminGuard: CanActivateFn = (route, state) => {
     map((user) => {
       if (user?.email === 'admin@admin.com') {
         console.log('El usuario es administrador.');
-        return true; // Permitir el acceso
+        return true;
       } else {
         console.log('El usuario no es administrador.');
-        return false; // Denegar el acceso
+        return false; 
       }
     })
   );

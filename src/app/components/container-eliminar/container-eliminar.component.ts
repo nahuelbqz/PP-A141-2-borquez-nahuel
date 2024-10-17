@@ -1,6 +1,7 @@
 import { Component, inject, Input } from '@angular/core';
 import {
   FormBuilder,
+  FormGroup,
   FormsModule,
   ReactiveFormsModule,
   Validators,
@@ -25,27 +26,22 @@ export class ContainerEliminarComponent {
   containerElim: ContainerInterfaceId = {
     id: '',
     codigo: 0,
-    color: '',
     empresa: '',
     capacidad: 0,
-  }; // Inicializando como objeto basado en la interfaz
+  }; 
   entidadesService: EntidadesService = inject(EntidadesService);
-
-  //@ts-ignore
-  forma: FormGroup;
+  forma!: FormGroup;
 
   constructor(private formBuilder: FormBuilder) {}
 
   ngOnInit(): void {
     this.forma = this.formBuilder.group({
-      codigo: ['', Validators.required],
-      color: ['', Validators.required],
+      codigo: ['', [Validators.required, Validators.min(100)]],
       empresa: ['', Validators.required],
-      capacidad: ['', Validators.required],
+      capacidad: ['', [Validators.required, Validators.min(1)]],
     });
   }
 
-  // ver como solucionar Error: containerId es undefined
   eliminarContainer(containerId?: string) {
     if (containerId) {
       this.entidadesService

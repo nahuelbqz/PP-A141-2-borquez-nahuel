@@ -6,16 +6,6 @@
             <input type="number" formControlName="codigo" class="form-control" formControlName="codigo"
                 [ngModel]="containerAModificar?.codigo" readonly />
         </div>
-        <!-- CONTROL COLOR -->
-        <div>
-            <label for="color" class="form-label">Color</label>
-            <input type="text" class="form-control" formControlName="color" required
-                [ngModel]="containerAModificar?.color" />
-            <small style="color: red;"
-                *ngIf="forma.controls['color'].errors?.['required'] && forma.controls['color'].touched">
-                El color es requerido
-            </small>
-        </div>
         <!-- CONTROL EMPRESA -->
         <div>
             <label for="empresa" class="form-label">Empresa</label>

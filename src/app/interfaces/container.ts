@@ -3,7 +3,6 @@ export interface ContainerInterfaceId extends ContainerInterface {
 }
 export interface ContainerInterface {
   codigo: number;
-  color: string;
   empresa: string;
   capacidad: number;
 }

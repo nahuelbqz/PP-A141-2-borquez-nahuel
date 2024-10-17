@@ -1,22 +1,16 @@
 <table class="table table-hover">
-    <thead>
-      <tr>
-        <th scope="col">CODIGO</th>
-        <th scope="col">COLOR</th>
-        <th scope="col">EMPRESA</th>
-        <th scope="col">CAPACIDAD</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr
-        style="cursor: pointer"
-        *ngFor="let container of listadoContainers"
-        (click)="enviarContainer(container)"
-      >
-        <td>{{ container.codigo }}</td>
-        <td>{{ container.color }}</td>
-        <td>{{ container.empresa }}</td>
-        <td>{{ container.capacidad }}</td>
-      </tr>
-    </tbody>
-  </table>
+  <thead>
+    <tr>
+      <th scope="col">CODIGO</th>
+      <th scope="col">EMPRESA</th>
+      <th scope="col">CAPACIDAD</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="cursor: pointer" *ngFor="let container of listadoContainers" (click)="enviarContainer(container)">
+      <td>{{ container.codigo }}</td>
+      <td>{{ container.empresa }}</td>
+      <td>{{ container.capacidad }}</td>
+    </tr>
+  </tbody>
+</table>

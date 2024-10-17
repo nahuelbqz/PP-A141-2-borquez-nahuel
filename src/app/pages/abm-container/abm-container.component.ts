@@ -5,7 +5,10 @@ import { ContainerEliminarComponent } from '../../components/container-eliminar/
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 import { EntidadesService } from '../../services/entidades.service';
-import { ContainerInterface, ContainerInterfaceId } from '../../interfaces/container';
+import {
+  ContainerInterface,
+  ContainerInterfaceId,
+} from '../../interfaces/container';
 import { ListadoContainerComponent } from '../../components/listado-container/listado-container.component';
 
 @Component({
@@ -24,21 +27,14 @@ export class AbmContainerComponent {
   containerRecibido: ContainerInterfaceId = {
     id: '',
     codigo: 0,
-    color: '',
     empresa: '',
     capacidad: 0,
   };
 
-  router = inject(Router);
-  authService = inject(AuthService);
   entidadesService = inject(EntidadesService);
-
-
-  constructor() {}
 
   ngOnInit(): void {
     // this.listadoContainers = this.entidadesService.traerContainers();
-
     // this.entidadesService.getContainers().subscribe((data) => {
     //   this.listadoContainers = data;
     // });
@@ -53,5 +49,4 @@ export class AbmContainerComponent {
     console.log($event);
     this.containerRecibido = $event;
   }
-  
 }

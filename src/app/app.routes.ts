@@ -38,13 +38,13 @@ export const routes: Routes = [
       ),
     canActivate: [loginGuard],
   },
-  {
-    path: 'lista-prod-publica',
-    loadComponent: () =>
-      import('./pages/lista-prod-publica/lista-prod-publica.component').then(
-        (m) => m.ListaProdPublicaComponent
-      ),
-  },
+  // {
+  //   path: 'lista-prod-publica',
+  //   loadComponent: () =>
+  //     import('./pages/lista-prod-publica/lista-prod-publica.component').then(
+  //       (m) => m.ListaProdPublicaComponent
+  //     ),
+  // },
   {
     path: 'abm-container',
     loadComponent: () =>
