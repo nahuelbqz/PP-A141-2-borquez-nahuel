@@ -10,9 +10,4 @@ import { ProductoInterface } from '../../interfaces/producto';
 })
 export class InformacionProductoComponent {
   @Input() productoRecibido?: ProductoInterface;
-
-  constructor() {}
-
-  ngOnInit(): void {
-  }
 }

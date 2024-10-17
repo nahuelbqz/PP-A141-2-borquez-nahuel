@@ -25,10 +25,6 @@ export class ProductoDetalleComponent {
     // comestible: false,
   }; // Inicializando como objeto basado en la interfaz
 
-  constructor() {}
-
-  ngOnInit(): void {}
-
   tomarProductoSeleccionado($event: any) {
     this.productoActivo = $event;
     console.log(this.productoActivo);

@@ -5,14 +5,8 @@ import { Component, Input } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './informacion-pais.component.html',
-  styleUrl: './informacion-pais.component.css'
+  styleUrl: './informacion-pais.component.css',
 })
 export class InformacionPaisComponent {
   @Input() paisRecibido?: any;
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }
