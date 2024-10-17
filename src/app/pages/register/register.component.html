@@ -1,0 +1,53 @@
+<div class="container">
+
+    <div class="form-signin w-100 ">
+        <form [formGroup]="formRegister" (ngSubmit)="onSubmit()">
+            <h1 class="h3 mb-3 fw-normal">Register</h1>
+
+            <!-- NOMBRE USUARIO -->
+            <div class="form-floating">
+                <input type="username" class="form-control" id="floatingInput" placeholder="name@example.com"
+                    name="username" formControlName="username" required>
+
+                <label for="floatingInput">Nombre de usuario</label>
+                @if(formRegister.get('username'); as aux){ @if(aux.invalid && (aux.dirty ||
+                aux.touched)){
+                <div class="alert hide alert-danger" role="alert" style="padding: 1px">
+                    {{ aux.hasError("required") ? "Es requerido" : "Es invalido" }}
+                </div>
+                } }
+            </div>
+
+            <!-- EMAIL -->
+            <div class="form-floating">
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="email"
+                    formControlName="email" required>
+
+                <label for="floatingInput">Email</label>
+                @if(formRegister.get('email'); as aux){ @if(aux.invalid && (aux.dirty ||
+                aux.touched)){
+                <div class="alert hide alert-danger" role="alert" style="padding: 1px">
+                    {{ aux.hasError("required") ? "Es requerido" : "Es invalido" }}
+                </div>
+                } }
+            </div>
+
+            <!-- CONTRASEÑA -->
+            <div class="form-floating">
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password"
+                    formControlName="password" required>
+
+                <label for="floatingPassword">Password</label>
+                @if(formRegister.get('password'); as aux){ @if(aux.invalid && (aux.dirty ||
+                aux.touched)){
+                <div class="alert hide alert-danger" role="alert" style="padding: 1px">
+                    {{ aux.hasError("required") ? "Es requerido" : "Es invalido" }}
+                </div>
+                } }
+            </div>
+
+            <button class="btn btn-primary w-100 py-2" style="margin-top: 20px;" type="submit">Registrarse</button>
+            <br>
+        </form>
+    </div>
+</div>

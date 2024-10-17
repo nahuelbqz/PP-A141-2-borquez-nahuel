@@ -1,0 +1,23 @@
+body{
+    margin: 0;
+  }
+  
+  header{
+    display: flex;
+    height: 70px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  nav a{
+    font-weight: bold;
+    /* padding: 0 20px; */
+    align-items: center;    
+  }
+  nav button{
+    font-weight: 600;
+    /* padding: 6px 20px; */
+    margin: 4px;
+    align-items: center;  
+  }

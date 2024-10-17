@@ -1,0 +1,6 @@
+{
+  "hosting": {
+    "public": "dist/borquez-nahuel-pp/browser",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+  }
+}

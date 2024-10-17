@@ -1,0 +1,22 @@
+<div class="d-flex justify-content-center align-items-center min-100vh">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h3>{{ data.name }}</h3>
+
+                <h3>División: 4° A</h3>
+                <h2 style="padding-top: 2rem">PRIMER PARCIAL LABORATORIO IV</h2>
+                <p>Seguidores: {{data.followers}}</p>
+                <p>Siguiendo: {{data.following}}</p>
+                <p>Repositorios: {{data.public_repos}}</p>
+                <p>Cuenta creada: {{data.created_at}}</p>
+
+            </div>
+
+            <div class="col col-img">
+                <img class="img" src="{{ data.avatar_url }}" alt="">
+            </div>
+
+        </div>
+    </div>
+</div>

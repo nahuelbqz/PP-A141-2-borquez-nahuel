@@ -1,0 +1,20 @@
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">CODIGO</th>
+        <th scope="col">DESCRIPCIÓN</th>
+        <th scope="col">PRECIO</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="cursor: pointer" 
+        *ngFor="let producto of listadoProductos" 
+        (click)="pasarProducto(producto)">
+
+        <td>{{ producto.codigo }}</td>
+        <td>{{ producto.descripcion }}</td>
+        <td>{{ producto.precio }}</td>
+
+      </tr>
+    </tbody>
+  </table>

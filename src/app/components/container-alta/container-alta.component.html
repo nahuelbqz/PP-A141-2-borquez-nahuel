@@ -1,0 +1,46 @@
+<form [formGroup]="forma" (ngSubmit)="agregarContainer()">
+  <div class="row g-3">
+    <!-- CONTROL CODIGO -->
+    <div>
+      <label for="codigo" class="form-label">Código</label>
+      <input type="number" formControlName="codigo" class="form-control" formControlName="codigo" required />
+      <small style="color: red;"
+        *ngIf="forma.controls['codigo'].errors?.['required'] && forma.controls['codigo'].touched">
+        El Código es requerido
+      </small>
+    </div>
+    <!-- CONTROL COLOR -->
+    <div>
+      <label for="color" class="form-label">Color</label>
+      <input type="text" class="form-control" formControlName="color" required />
+      <small style="color: red;"
+        *ngIf="forma.controls['color'].errors?.['required'] && forma.controls['color'].touched">
+        El color es requerido
+      </small>
+    </div>
+    <!-- CONTROL EMPRESA -->
+    <div>
+      <label for="empresa" class="form-label">Empresa</label>
+      <input type="text" class="form-control" formControlName="empresa" required />
+      <small style="color: red;"
+        *ngIf="forma.controls['empresa'].errors?.['required'] && forma.controls['empresa'].touched">
+        La empresa es requerida
+      </small>
+    </div>
+    <!-- CONTROL CAPACIDAD -->
+    <div>
+      <label for="capacidad" class="form-label">Capacidad</label>
+      <input type="number" formControlName="capacidad" class="form-control" formControlName="capacidad" required />
+      <small style="color: red;"
+        *ngIf="forma.controls['capacidad'].errors?.['required'] && forma.controls['capacidad'].touched">
+        La capacidad es requerida
+      </small>
+    </div>
+  </div>
+
+  <hr class="my-4" />
+
+  <button class="w-100 btn btn-primary btn-lg" type="submit">
+    Registrar container
+  </button>
+</form>

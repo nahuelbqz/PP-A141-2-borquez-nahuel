@@ -1,0 +1,45 @@
+html,
+body {
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  justify-content: center; /* Centra el form horizontalmente */
+  align-items: center; /* Centra el form verticalmente */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-color: #fff;
+  min-height: 100vh;
+}
+
+h1 {
+  color: #fff;
+}
+
+.p-nuevo-usuario {
+  color: #fff;
+}
+
+a {
+  color: #fff;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 400px; /* Limita el ancho máximo del formulario */
+  padding: 2rem;
+  background-color: #444;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Añade sombra para destacar el formulario */
+}
+
+.alert {
+  margin-top: 5px; /* Añade un pequeño margen para separar las alertas */
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}

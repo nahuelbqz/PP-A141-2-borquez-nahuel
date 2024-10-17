@@ -1,0 +1,8 @@
+<div class="contenedor">
+  <div class="row pais" *ngFor="let pais of listadoPaises" (click)="pasarPais(pais)">
+    <div class="col text-center">{{ pais.name.common }}</div>
+    <div class="col">
+      <img style="width: 70px; height: 50px;" src="{{ pais.flags.png }}" alt="bandera" />
+    </div>
+  </div>
+</div>

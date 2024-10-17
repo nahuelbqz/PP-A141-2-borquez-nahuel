@@ -1,0 +1,17 @@
+.contenedor{
+    height: 17rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.pais  {
+    font-weight: bolder;
+    padding: 10px;
+}
+
+.pais:hover {
+    background: #666;
+    color: #fff;
+    transition: background 0.5s;
+    cursor: pointer;
+}

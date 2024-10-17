@@ -1,0 +1,28 @@
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">CODIGO</th>
+            <th scope="col">DESCRIPCIÓN</th>
+            <th scope="col">PRECIO</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- <tr style="cursor: pointer" 
+        *ngFor="let producto of listaFiltrada" 
+        (click)="pasarProducto(producto)">
+
+        <td>{{ producto.codigo }}</td>
+        <td>{{ producto.descripcion }}</td>
+        <td>{{ producto.precio }}</td>
+
+      </tr> -->
+
+        @for (producto of listaFiltrada; track $index) {
+        <tr style="cursor: pointer">
+            <td>{{ producto.codigo }}</td>
+            <td>{{ producto.descripcion }}</td>
+            <td>{{ producto.precio }}</td>
+        </tr>
+        }
+    </tbody>
+</table>
